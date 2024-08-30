@@ -1,10 +1,10 @@
 package com.ifma.locadora.adapters.out.repository.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -16,4 +16,10 @@ public class ClienteEntity {
     private String email;
     private String telefone;
     private String senha;
+
+    @OneToMany(mappedBy = "cliente")
+    private Set<LocacaoEntity> locacoes = new LinkedHashSet<>();
+
+    @OneToMany(mappedBy = "cliente")
+    private Set<UtilizacaoDoConsolePeloClienteEntity> utilizacoes = new LinkedHashSet<>();
 }
