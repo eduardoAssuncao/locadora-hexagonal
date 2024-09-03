@@ -1,6 +1,5 @@
 package com.ifma.locadora.adapters.out.repository.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -17,7 +16,7 @@ public class JogoPlataformaEntity {
 
     @EmbeddedId
     //@JsonIgnore
-    private JogoPlataformaPK id = new JogoPlataformaPK();
+    private JogoPlataformaEntityPK id = new JogoPlataformaEntityPK();
 
     private BigDecimal precoDiario;
 

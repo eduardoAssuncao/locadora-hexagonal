@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @Data
 @Embeddable
-public class ItemLocacaoPK implements Serializable {
+public class ItemLocacaoEntityPK implements Serializable {
 
     @ManyToOne
     @JoinColumns({

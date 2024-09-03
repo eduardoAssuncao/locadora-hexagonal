@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @Data
 @Embeddable
-public class JogoPlataformaPK implements Serializable {
+public class JogoPlataformaEntityPK implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "jogo_id")

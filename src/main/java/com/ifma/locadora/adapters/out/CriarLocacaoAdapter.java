@@ -15,7 +15,7 @@ public class CriarLocacaoAdapter implements CriarLocacaoOutputPort {
     private final LocacaoEntityMapper locacaoEntityMapper;
 
     @Override
-    public void criar(Locacao locacao) {
+    public void criar(Locacao locacao) { //TODO: necessário informar o cliente dessa locacao
         var locacaoEntity = locacaoEntityMapper.toLocacaoEntity(locacao);
         locacaoRepository.save(locacaoEntity);
     }

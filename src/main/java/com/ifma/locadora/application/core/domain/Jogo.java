@@ -1,9 +1,13 @@
 package com.ifma.locadora.application.core.domain;
 
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 public class Jogo {
 
     private Integer id;
     private String titulo;
+    private Set<JogoPlataforma> itens = new LinkedHashSet<>();
 
     public Jogo(){}
 
