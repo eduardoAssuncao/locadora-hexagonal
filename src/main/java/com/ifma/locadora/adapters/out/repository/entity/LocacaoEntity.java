@@ -22,4 +22,17 @@ public class LocacaoEntity {
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private ClienteEntity cliente;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LocacaoEntity that = (LocacaoEntity) o;
+        return id != null && id.equals(that.id); // Use apenas o ID para comparação
+    }
+
+    @Override
+    public int hashCode() {
+        return 31;
+    }
 }

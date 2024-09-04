@@ -22,4 +22,17 @@ public class ClienteEntity {
 
     @OneToMany(mappedBy = "cliente")
     private Set<UtilizacaoDoConsolePeloClienteEntity> utilizacoes = new LinkedHashSet<>();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ClienteEntity that = (ClienteEntity) o;
+        return id != null && id.equals(that.id); // Use apenas o ID para comparação
+    }
+
+    @Override
+    public int hashCode() {
+        return 31;
+    }
 }

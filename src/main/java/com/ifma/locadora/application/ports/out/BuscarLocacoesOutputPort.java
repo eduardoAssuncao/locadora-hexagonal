@@ -2,7 +2,9 @@ package com.ifma.locadora.application.ports.out;
 
 import com.ifma.locadora.application.core.domain.Locacao;
 
-public interface CriarLocacaoOutputPort {
+import java.util.List;
 
-    void criar(Integer clienteId, Locacao locacao);
+public interface BuscarLocacoesOutputPort {
+
+    List<Locacao> buscarLocacoes();
 }

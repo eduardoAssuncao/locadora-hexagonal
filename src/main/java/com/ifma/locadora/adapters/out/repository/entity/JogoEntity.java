@@ -16,4 +16,17 @@ public class JogoEntity {
 
     @OneToMany(mappedBy = "id.jogo", /*fetch = FetchType.EAGER,*/ cascade = CascadeType.ALL)
     private Set<JogoPlataformaEntity> itens = new LinkedHashSet<>();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        JogoEntity that = (JogoEntity) o;
+        return id != null && id.equals(that.id); // Use apenas o ID para comparação
+    }
+
+    @Override
+    public int hashCode() {
+        return 31;
+    }
 }

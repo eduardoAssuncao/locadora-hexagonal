@@ -15,7 +15,7 @@ public class CriarLocacaoUC implements CriarLocacaoInputPort {
     }
 
     @Override
-    public void criar(Locacao locacao) {
-        criarLocacaoOutputPort.criar(locacao);
+    public void criar(Integer clienteId, Locacao locacao) {
+        criarLocacaoOutputPort.criar(clienteId, locacao);
     }
 }
