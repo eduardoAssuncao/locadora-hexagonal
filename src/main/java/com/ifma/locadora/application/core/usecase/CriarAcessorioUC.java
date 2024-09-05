@@ -3,7 +3,9 @@ package com.ifma.locadora.application.core.usecase;
 import com.ifma.locadora.application.core.domain.Acessorio;
 import com.ifma.locadora.application.ports.in.CriarAcessorioInputPort;
 import com.ifma.locadora.application.ports.out.CriarAcessorioOutputPort;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CriarAcessorioUC implements CriarAcessorioInputPort {
 
     private final CriarAcessorioOutputPort criarAcessorioOutputPort;

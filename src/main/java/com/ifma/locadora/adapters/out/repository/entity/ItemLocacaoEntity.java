@@ -9,7 +9,7 @@ import lombok.Data;
 public class ItemLocacaoEntity {
 
     @EmbeddedId
-    private ItemLocacaoPK id = new ItemLocacaoPK();
+    private ItemLocacaoEntityPK id = new ItemLocacaoEntityPK();
 
     private Integer dias;
     private Integer quantidade;

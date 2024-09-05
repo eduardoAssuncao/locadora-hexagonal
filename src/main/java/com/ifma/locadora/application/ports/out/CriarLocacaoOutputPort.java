@@ -4,5 +4,5 @@ import com.ifma.locadora.application.core.domain.Locacao;
 
 public interface CriarLocacaoOutputPort {
 
-    void criar(Locacao locacao);
+    void criar(Integer clienteId, Locacao locacao);
 }

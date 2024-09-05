@@ -3,7 +3,9 @@ package com.ifma.locadora.application.core.usecase;
 import com.ifma.locadora.application.core.domain.Jogo;
 import com.ifma.locadora.application.ports.in.CriarJogoInputPort;
 import com.ifma.locadora.application.ports.out.CriarJogoOutputPort;
+import org.springframework.stereotype.Service;
 
+@Service
 public class CriarJogoUC implements CriarJogoInputPort {
 
     private final CriarJogoOutputPort criarJogoOutputPort;
