@@ -8,9 +8,10 @@ import java.util.Set;
 
 @Data
 @Entity
+@SequenceGenerator(name = "jogo_entity_seq", sequenceName = "jogo_entity_seq", allocationSize = 1)
 public class JogoEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "jogo_entity_seq")
     private Integer id;
     private String titulo;
 

@@ -1,16 +1,14 @@
 package com.ifma.locadora.adapters.out.repository.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
 @Entity
+@SequenceGenerator(name = "plataforma_entity_seq", sequenceName = "plataforma_entity_seq", allocationSize = 1)
 public class PlataformaEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "plataforma_entity_seq")
     private Integer id;
     private String nome;
 

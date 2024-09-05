@@ -9,9 +9,10 @@ import java.util.Set;
 
 @Data
 @Entity
+@SequenceGenerator(name = "locacao_entity_seq", sequenceName = "locacao_entity_seq", allocationSize = 1)
 public class LocacaoEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "locacao_entity_seq")
     private Integer id;
 
     private LocalDate data;

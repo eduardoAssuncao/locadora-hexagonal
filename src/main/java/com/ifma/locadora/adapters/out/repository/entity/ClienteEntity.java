@@ -8,9 +8,10 @@ import java.util.Set;
 
 @Data
 @Entity
+@SequenceGenerator(name = "cliente_entity_seq", sequenceName = "cliente_entity_seq", allocationSize = 1)
 public class ClienteEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "cliente_entity_seq")
     private Integer id;
     private String nome;
     private String email;

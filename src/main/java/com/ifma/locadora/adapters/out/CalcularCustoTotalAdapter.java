@@ -1,20 +1,18 @@
 package com.ifma.locadora.adapters.out;
 
 import com.ifma.locadora.adapters.out.repository.LocacaoRepository;
-import com.ifma.locadora.adapters.out.repository.mapper.LocacaoEntityMapper;
 import com.ifma.locadora.application.ports.out.CalcularCustoTotalOutputPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 @Component
 @RequiredArgsConstructor
 public class CalcularCustoTotalAdapter implements CalcularCustoTotalOutputPort {
 
     private final LocacaoRepository locacaoRepository;
-    private final LocacaoEntityMapper locacaoEntityMapper;
+    //private final LocacaoEntityMapper locacaoEntityMapper;
 
     @Override
     public BigDecimal calcularCustoTotal(Integer locacaoId) {
